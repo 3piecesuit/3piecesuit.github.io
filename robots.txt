@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://3PieceSuit.github.io/sitemap.xml
+
+# 3PieceSuit.github.io — Baby Boy 3 Piece Suit Pakistan

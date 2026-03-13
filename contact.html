@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Order Baby Boy 3 Piece Suit Pakistan | 3PieceSuit</title>
+<meta name="description" content="Order baby boy 3 piece suit in Pakistan. Select your product, view images, and place your order. Best price, fast delivery all Pakistan.">
+<meta name="keywords" content="order baby boy 3 piece suit pakistan, buy baby boy suit online, 3 piece suit price pakistan">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://3PieceSuit.github.io/contact.html">
+<meta property="og:title" content="Order Baby Boy 3 Piece Suit — 3PieceSuit Pakistan">
+<meta property="og:url" content="https://3PieceSuit.github.io/contact.html">
+<meta name="geo.region" content="PK">
+<link rel="icon" href="icon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="extra.css">
+
+<style>
+/* ══════════════════════════════════════════════════════
+   ORDER PAGE — Product Selector + Live Image Preview
+   ══════════════════════════════════════════════════════ */
+
+/* Page wrapper */
+.order-page { background: var(--ivory); min-height: 100vh; }
+
+/* ── PRODUCT CARDS (top selector) ────────────────────── */
+.prod-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.ps-card {
+  border: 2px solid var(--light);
+  border-radius: var(--radius2);
+  cursor: pointer;
+  overflow: hidden;
+  background: var(--white);
+  transition: all var(--t);
+  position: relative;
+  outline: none;
+}
+.ps-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(11,29,58,.12);
+}
+.ps-card.selected {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,.22), 0 12px 32px rgba(11,29,58,.14);
+}
+.ps-card .ps-thumb {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.ps-card:hover .ps-thumb,
+.ps-card.selected .ps-thumb { transform: scale(1.04); }
+.ps-card-body { padding: 14px 16px 16px; }
+.ps-card-cat {
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.ps-card-name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.ps-card-stars {
+  font-size: .82rem;
+  color: #f59e0b;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.ps-card-stars span { color: var(--muted); font-size: .72rem; }
+
+/* Selected tick */
+.ps-check {
+  position: absolute;
+  top: 10px; right: 10px;
+  width: 28px; height: 28px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items:center; justify-content:center;
+  opacity: 0;
+  transition: opacity var(--t), transform var(--t);
+  transform: scale(.6);
+  z-index: 2;
+  color: var(--navy);
+  font-size: .9rem;
+  font-weight: 900;
+  box-shadow: 0 2px 8px rgba(201,168,76,.4);
+}
+.ps-card.selected .ps-check { opacity:1; transform:scale(1); }
+
+/* ── IMAGE PREVIEW PANEL ──────────────────────────────── */
+.img-preview-panel {
+  background: var(--white);
+  border: 1px solid var(--light);
+  border-radius: var(--radius2);
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow2);
+  transition: all var(--t);
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.img-preview-panel.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--light);
+  background: var(--ivory);
+  box-shadow: none;
+}
+.img-preview-hint {
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+.img-preview-hint span { font-size: 2.4rem; display: block; margin-bottom: 10px; }
+
+/* Preview header */
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.preview-product-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+.preview-badge {
+  background: var(--navy);
+  color: var(--gold);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+.preview-stars {
+  color: #f59e0b;
+  font-size: .95rem;
+}
+
+/* Image grid */
+.preview-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.preview-img-wrap {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: zoom-in;
+  background: var(--cream);
+  aspect-ratio: 3/4;
+  border: 1px solid var(--light);
+}
+.preview-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+  display: block;
+}
+.preview-img-wrap:hover img { transform: scale(1.06); }
+.preview-img-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(11,29,58,.75));
+  color: var(--white);
+  font-size: .72rem;
+  font-weight: 600;
+  padding: 20px 10px 8px;
+  letter-spacing: .04em;
+}
+.preview-zoom-icon {
+  position: absolute;
+  top: 8px; right: 8px;
+  background: rgba(255,255,255,.85);
+  color: var(--navy);
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items:center; justify-content:center;
+  font-size: .8rem;
+  opacity: 0;
+  transition: opacity var(--t);
+  pointer-events: none;
+}
+.preview-img-wrap:hover .preview-zoom-icon { opacity: 1; }
+
+/* Features list */
+.preview-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pf-tag {
+  background: var(--cream);
+  border: 1px solid var(--light);
+  color: var(--navy);
+  font-size: .75rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ── MAIN ORDER LAYOUT ────────────────────────────────── */
+.order-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Info sidebar */
+.order-info { position: sticky; top: 90px; }
+.order-info h2 {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+.order-info > p {
+  color: var(--muted);
+  font-size: .93rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.o-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.o-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--ivory);
+  border: 1px solid var(--light);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  transition: all var(--t);
+}
+.o-info-item:hover {
+  border-color: rgba(201,168,76,.4);
+  background: var(--cream);
+}
+.o-info-icon {
+  width: 40px; height: 40px;
+  background: var(--navy);
+  border-radius: var(--radius);
+  display: flex; align-items:center; justify-content:center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.o-info-text strong {
+  display: block;
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+.o-info-text span {
+  font-size: .82rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* ── ORDER FORM PANEL ─────────────────────────────────── */
+.order-panel {
+  background: var(--white);
+  border-radius: var(--radius2);
+  border: 1px solid var(--light);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.order-panel-head {
+  background: var(--navy);
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.order-panel-head h2 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+.order-panel-head span {
+  font-size: .78rem;
+  color: rgba(255,255,255,.55);
+  margin-left: auto;
+  white-space: nowrap;
+}
+.order-panel-body { padding: 28px; }
+
+/* Step indicator */
+.order-steps {
+  display: flex;
+  gap: 0;
+  margin-bottom: 32px;
+  background: var(--ivory);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--light);
+}
+.o-step {
+  flex: 1;
+  text-align: center;
+  padding: 10px 8px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  position: relative;
+  border-right: 1px solid var(--light);
+  transition: all var(--t);
+}
+.o-step:last-child { border-right: none; }
+.o-step.active {
+  background: var(--navy);
+  color: var(--gold);
+}
+.o-step.done {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.o-step .step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: currentColor;
+  color: var(--white);
+  font-size: .65rem;
+  margin-bottom: 3px;
+  opacity: .8;
+}
+.o-step.done .step-num::before { content: "✓"; }
+
+/* Highlighted product selection inside form */
+.form-prod-select {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.fps-option {
+  border: 2px solid var(--light);
+  border-radius: var(--radius);
+  padding: 12px 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--t);
+  background: var(--ivory);
+  position: relative;
+  overflow: hidden;
+}
+.fps-option:hover { border-color: var(--gold); background: var(--cream); }
+.fps-option.active {
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(201,168,76,.15);
+}
+.fps-option input[type="radio"] {
+  position: absolute; opacity:0; pointer-events:none;
+}
+.fps-thumb {
+  width: 60px; height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 0 auto 8px;
+  display: block;
+  border: 1px solid var(--light);
+}
+.fps-label {
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  display: block;
+}
+.fps-check {
+  position: absolute;
+  top: 6px; right: 6px;
+  width: 20px; height: 20px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items:center; justify-content:center;
+  font-size: .7rem;
+  font-weight: 900;
+  color: var(--navy);
+  opacity: 0;
+  transition: all var(--t);
+  transform: scale(.5);
+}
+.fps-option.active .fps-check { opacity:1; transform:scale(1); }
+
+/* ── LIGHTBOX ─────────────────────────────────────────── */
+.lb-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.9);
+  z-index: 9999;
+  display: flex; align-items:center; justify-content:center;
+  padding: 20px;
+  cursor: zoom-out;
+  animation: lb-in .2s ease;
+  flex-direction: column;
+  gap: 16px;
+}
+@keyframes lb-in { from{opacity:0;transform:scale(.95)} to{opacity:1;transform:scale(1)} }
+.lb-overlay img {
+  max-width: 90vw; max-height: 82vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.6);
+  cursor: default;
+}
+.lb-caption {
+  color: rgba(255,255,255,.75);
+  font-size: .9rem;
+  text-align: center;
+}
+.lb-close {
+  position: absolute; top: 16px; right: 20px;
+  background: rgba(255,255,255,.12); border: none;
+  color: var(--white); font-size: 1.6rem;
+  width: 44px; height: 44px; border-radius: 50%;
+  cursor: pointer; transition: background .2s;
+  display: flex; align-items:center; justify-content:center;
+}
+.lb-close:hover { background: rgba(255,255,255,.25); }
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .order-layout { grid-template-columns: 1fr; }
+  .order-info { position: static; }
+}
+@media (max-width: 640px) {
+  .prod-selector { grid-template-columns: repeat(3, 1fr); }
+  .preview-imgs { grid-template-columns: 1fr 1fr; }
+  .order-panel-body { padding: 20px 16px; }
+  .form-prod-select { grid-template-columns: 1fr 1fr 1fr; }
+  .fps-thumb { width: 48px; height: 48px; }
+}
+@media (max-width: 440px) {
+  .prod-selector { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+
+<body class="order-page">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/923104515679?text=Hi%20I%20want%20to%20order%20a%20Baby%20Boy%203%20Piece%20Suit"
+   class="whatsapp-float" target="_blank" rel="noopener" aria-label="Order on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <span>WhatsApp Order</span>
+</a>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-scroll">
+    <span>🎉 Sale On Baby Boy 3 Piece Suits!</span><span class="sep">✦</span>
+    <span>🚚 Fast Delivery All Pakistan</span><span class="sep">✦</span>
+    <span>📦 Cash on Delivery</span><span class="sep">✦</span>
+    <span>✅ 500+ Happy Customers</span><span class="sep">✦</span>
+    <span>🎉 Sale On Baby Boy 3 Piece Suits!</span><span class="sep">✦</span>
+    <span>🚚 Fast Delivery All Pakistan</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+  <nav class="nav-container" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="3PieceSuit Home">
+      <img src="logo.png" alt="3PieceSuit" width="40" height="40" class="logo-img" onerror="this.style.display='none'">
+      <span>3Piece<em>Suit</em></span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active" aria-current="page">Order</a></li>
+      <li><a href="contact.html" class="nav-btn">🛒 Order Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="background:var(--navy);padding:56px 24px;">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span aria-hidden="true">›</span>
+        <a href="products.html">Products</a><span aria-hidden="true">›</span>
+        <span aria-current="page">Place Order</span>
+      </nav>
+      <h1>Place Your <span class="gold">Order</span></h1>
+      <p>Select your product below — images load instantly. Fill in details &amp; we'll confirm with best price + fast Pakistan delivery.</p>
+    </div>
+  </div>
+
+  <section class="section" aria-labelledby="order-title">
+    <div class="container">
+
+      <!-- ── STEP 1: SELECT PRODUCT (card grid) ─────────── -->
+      <div style="margin-bottom:40px;">
+        <p class="sub-label" style="margin-bottom:12px;">Step 1 — Choose Your Product</p>
+        <h2 id="order-title" style="font-family:var(--font-serif);font-size:1.6rem;font-weight:700;color:var(--navy);margin-bottom:20px;">Select a <span class="gold">Suit</span> to See Images &amp; Order</h2>
+
+        <!-- Product Selector Cards -->
+        <div class="prod-selector" role="radiogroup" aria-label="Select product" id="prodSelectorCards">
+
+          <!-- Card 1 -->
+          <div class="ps-card reveal" data-product="P1" data-value="P1"
+               tabindex="0" role="radio" aria-checked="false"
+               aria-label="Baby Boy Suit · 1–2 Years — Classic Premium">
+            <span class="ps-check" aria-hidden="true">✓</span>
+            <img class="ps-thumb" src="P11img.png" alt="Baby Boy 3 Piece Suit 1–2 Years Pakistan" width="220" height="165" loading="lazy">
+            <div class="ps-card-body">
+              <p class="ps-card-cat">Baby Boy Suit · 1–2 Years</p>
+              <p class="ps-card-name">Baby Boy Suit<br>Classic Premium</p>
+              <div class="ps-card-stars">★★★★★ <span>(48)</span></div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="ps-card reveal" data-product="P2" data-value="P2"
+               tabindex="0" role="radio" aria-checked="false"
+               aria-label="Baby Boy Suit · Royal Edition">
+            <span class="ps-check" aria-hidden="true">✓</span>
+            <img class="ps-thumb" src="P12img.png" alt="Baby Boy 3 Piece Suit Royal Edition Pakistan" width="220" height="165" loading="lazy">
+            <div class="ps-card-body">
+              <p class="ps-card-cat">Baby Boy Suit · Royal Edition</p>
+              <p class="ps-card-name">Baby Boy Suit<br>Royal Wedding</p>
+              <div class="ps-card-stars">★★★★★ <span>(36)</span></div>
+            </div>
+          </div>
+
+        </div><!-- /prod-selector -->
+      </div>
+
+      <!-- ── STEP 2: IMAGE PREVIEW ───────────────────────── -->
+      <div style="margin-bottom:40px;">
+        <p class="sub-label" style="margin-bottom:12px;">Step 2 — Product Images</p>
+        <h3 style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Selected Product <span class="gold">Photos</span></h3>
+
+        <div class="img-preview-panel empty" id="imgPreviewPanel" aria-live="polite" aria-label="Product image preview">
+          <div class="img-preview-hint" id="previewHint">
+            <span aria-hidden="true">👆</span>
+            Select a product above to see its photos
+          </div>
+
+          <!-- Filled preview (hidden by default) -->
+          <div id="previewContent" style="display:none;width:100%;">
+            <div class="preview-header">
+              <div>
+                <p id="previewCat" style="font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:4px;"></p>
+                <p class="preview-product-name" id="previewName"></p>
+                <div class="preview-stars" aria-label="5 stars">★★★★★</div>
+              </div>
+              <div style="text-align:right;">
+                <span class="preview-badge" id="previewBadge"></span>
+                <p style="font-size:.78rem;color:var(--muted);margin-top:8px;" id="previewDesc"></p>
+              </div>
+            </div>
+            <div class="preview-imgs" id="previewImgs">
+              <!-- Images injected by JS -->
+            </div>
+            <div class="preview-features" id="previewFeatures">
+              <!-- Tags injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── STEP 3: ORDER FORM ──────────────────────────── -->
+      <div class="order-layout">
+
+        <!-- Sidebar Info -->
+        <aside class="order-info" aria-label="Order information">
+          <p class="sub-label">Step 3 — Your Details</p>
+          <h2>Fill In Your <span class="gold">Order Details</span></h2>
+          <p>After submitting, we'll contact you within <strong>a few hours</strong> to confirm your order with exact price and delivery details.</p>
+
+          <div class="o-info-list">
+            <div class="o-info-item">
+              <div class="o-info-icon" aria-hidden="true">📍</div>
+              <div class="o-info-text">
+                <strong>Pakistan — All Cities</strong>
+                <span>Lahore · Karachi · Islamabad · Rawalpindi · Faisalabad · Multan &amp; more</span>
+              </div>
+            </div>
+            <div class="o-info-item">
+              <div class="o-info-icon" aria-hidden="true">📦</div>
+              <div class="o-info-text">
+                <strong>Cash on Delivery Available</strong>
+                <span>Pay when your order arrives — safe &amp; secure</span>
+              </div>
+            </div>
+            <div class="o-info-item">
+              <div class="o-info-icon" aria-hidden="true">🚚</div>
+              <div class="o-info-text">
+                <strong>Fast Delivery</strong>
+                <span>Quick dispatch, tracked shipping across Pakistan</span>
+              </div>
+            </div>
+            <div class="o-info-item">
+              <div class="o-info-icon" aria-hidden="true">🔄</div>
+              <div class="o-info-text">
+                <strong>Easy Exchange Policy</strong>
+                <span>Wrong size? We'll exchange it — no hassle</span>
+              </div>
+            </div>
+            <div class="o-info-item">
+              <div class="o-info-icon" aria-hidden="true">💬</div>
+              <div class="o-info-text">
+                <strong>WhatsApp Support</strong>
+                <span><a href="https://wa.me/923104515679" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Chat with us directly</a> for quick answers</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust mini badges -->
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="background:var(--navy);color:var(--gold);font-size:.72rem;font-weight:700;padding:6px 12px;border-radius:20px;">🔒 Secure Order</span>
+            <span style="background:var(--navy);color:var(--gold);font-size:.72rem;font-weight:700;padding:6px 12px;border-radius:20px;">⭐ 5-Star Rated</span>
+            <span style="background:var(--navy);color:var(--gold);font-size:.72rem;font-weight:700;padding:6px 12px;border-radius:20px;">500+ Orders</span>
+          </div>
+        </aside>
+
+        <!-- ORDER FORM PANEL -->
+        <div class="order-panel" role="main" aria-label="Order form">
+          <div class="order-panel-head">
+            <span style="font-size:1.4rem;" aria-hidden="true">🛒</span>
+            <h2>Order Request Form</h2>
+            <span>🔒 Private &amp; Secure</span>
+          </div>
+
+          <div class="order-panel-body">
+
+            <!-- Mini product selector inside form -->
+            <div style="margin-bottom:24px;">
+              <label style="font-size:.82rem;font-weight:700;color:var(--navy);letter-spacing:.04em;text-transform:uppercase;display:block;margin-bottom:10px;">Selected Product *</label>
+              <div class="form-prod-select" role="radiogroup" aria-label="Product choice" id="formProdSelect">
+
+                <label class="fps-option" for="fpsP1">
+                  <input type="radio" name="product_choice" id="fpsP1" value="Baby Boy Suit · 1–2 Years (Classic Premium)" data-product="P1">
+                  <span class="fps-check" aria-hidden="true">✓</span>
+                  <img class="fps-thumb" src="P11img.png" alt="Baby Boy Classic Suit" width="60" height="60">
+                  <span class="fps-label">Baby Boy<br>1–2 Years</span>
+                </label>
+
+                <label class="fps-option" for="fpsP2">
+                  <input type="radio" name="product_choice" id="fpsP2" value="Baby Boy Suit · Royal Edition" data-product="P2">
+                  <span class="fps-check" aria-hidden="true">✓</span>
+                  <img class="fps-thumb" src="P12img.png" alt="Baby Boy Royal Suit" width="60" height="60">
+                  <span class="fps-label">Royal<br>Edition</span>
+                </label>
+
+              </div>
+            </div>
+
+            <form id="orderForm" novalidate aria-label="Order request">
+              <!-- hidden anti-spam -->
+              <div style="display:none;" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+              <!-- Hidden product field (synced by JS) -->
+              <input type="hidden" name="product" id="hiddenProduct" value="">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">Full Name *</label>
+                  <input type="text" id="fname" name="name" placeholder="Your full name" required autocomplete="name" aria-required="true">
+                </div>
+                <div class="form-group">
+                  <label for="fphone">Phone / WhatsApp *</label>
+                  <input type="tel" id="fphone" name="phone" placeholder="+92 3xx-xxxxxx" required autocomplete="tel" aria-required="true">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fage">Age / Size *</label>
+                  <select id="fage" name="size_age" required aria-required="true">
+                    <option value="" disabled selected>— Select —</option>
+                    <option value="6-12 months">6–12 Months (Baby)</option>
+                    <option value="1 year">1 Year Old Boy</option>
+                    <option value="2 years">2 Year Old Boy</option>
+                    <option value="3 years">3 Year Old Boy</option>
+                    <option value="custom">Custom Size</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="fqty">Quantity *</label>
+                  <select id="fqty" name="quantity" required aria-required="true">
+                    <option value="1">1 Piece</option>
+                    <option value="2">2 Pieces</option>
+                    <option value="3">3 Pieces</option>
+                    <option value="4">4 Pieces</option>
+                    <option value="5+">5+ (Bulk Order)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="fcity">City &amp; Delivery Address *</label>
+                <input type="text" id="fcity" name="city_address" placeholder="City and delivery address in Pakistan" required aria-required="true">
+              </div>
+
+              <div class="form-group">
+                <label for="fmsg">Special Requirements</label>
+                <textarea id="fmsg" name="message" placeholder="Color preference, occasion, any special notes…" rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="form-submit" id="submitBtn">
+                🛒 Send Order Request
+              </button>
+              <div id="formMsg" class="form-msg" role="alert" aria-live="polite"></div>
+              <p class="form-note">🔒 Your info is private &amp; secure. We reply within 24 hours.</p>
+            </form>
+          </div>
+        </div>
+
+      </div><!-- /order-layout -->
+
+    </div><!-- /container -->
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="3PieceSuit" width="36" height="36" class="logo-img" onerror="this.style.display='none'">
+        <span>3Piece<em>Suit</em></span>
+      </a>
+      <p>Pakistan's trusted store for baby boy &amp; Premium quality, best price, fast delivery.</p>
+      <div class="footer-trust"><span>🔒 Secure</span><span>📦 COD</span><span>🚚 Fast</span><span>⭐ 5-Star</span></div>
+    </div>
+    <div class="footer-nav">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Order Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-cats">
+      <h3>Products</h3>
+      <ul>
+        <li><a href="contact.html?product=P1">Baby Boy 1–2 Years Suit</a></li>
+        <li><a href="contact.html?product=P2">Baby Boy Royal Edition</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Order Now</h3>
+      <p>📍 Pakistan — All Cities</p>
+      <p>🌐 <a href="https://3PieceSuit.github.io">3PieceSuit.github.io</a></p>
+      <a href="https://wa.me/923104515679" class="btn-wa-footer" target="_blank" rel="noopener">💬 WhatsApp Order</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="yr"></span> 3PieceSuit.github.io — Baby Boy 3 Piece Suit Pakistan. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<button id="btt" aria-label="Back to top" title="Back to top">↑</button>
+
+<!-- ════════════════════════════════════════════════════════
+     ORDER PAGE JAVASCRIPT
+     ════════════════════════════════════════════════════════ -->
+<script>
+(function(){
+"use strict";
+
+/* ── PRODUCT DATA ──────────────────────────────────────── */
+var PRODUCTS = {
+  P1: {
+    code:     "P1",
+    cat:      "Baby Boy Suit · 1–2 Years",
+    name:     "Baby Boy 3 Piece Wedding Suit — Classic Premium",
+    badge:    "⭐ Best Seller",
+    desc:     "Perfect for 1 year & 2 year old boys at weddings",
+    imgs: [
+      { src: "P11img.png", label: "Front View — Classic Premium" },
+      { src: "P12img.png", label: "Side View — Classic Premium" }
+    ],
+    features: ["👶 1–2 Years", "🎩 3 Piece Set", "💒 Wedding Perfect", "🇵🇰 Pakistan Delivery", "📦 COD Available"]
+  },
+  P2: {
+    code:     "P2",
+    cat:      "Baby Boy Suit · Royal Edition",
+    name:     "Baby Boy 3 Piece Suit — Royal Wedding Edition",
+    badge:    "✨ New Arrival",
+    desc:     "Elegant royal design for 2 year old boys",
+    imgs: [
+      { src: "P12img.png", label: "Front View — Royal Edition" },
+      { src: "P11img.png", label: "Detail View — Royal Edition" }
+    ],
+    features: ["👶 2+ Years", "👑 Royal Design", "💒 Wedding Perfect", "🇵🇰 Pakistan Delivery", "📦 COD Available"]
+  },
+};
+
+/* ── ELEMENTS ──────────────────────────────────────────── */
+var selectorCards  = document.querySelectorAll("#prodSelectorCards .ps-card");
+var imgPanel       = document.getElementById("imgPreviewPanel");
+var previewHint    = document.getElementById("previewHint");
+var previewContent = document.getElementById("previewContent");
+var previewCat     = document.getElementById("previewCat");
+var previewName    = document.getElementById("previewName");
+var previewBadge   = document.getElementById("previewBadge");
+var previewDesc    = document.getElementById("previewDesc");
+var previewImgs    = document.getElementById("previewImgs");
+var previewFeatures= document.getElementById("previewFeatures");
+var hiddenProduct  = document.getElementById("hiddenProduct");
+var formProdOpts   = document.querySelectorAll("#formProdSelect .fps-option");
+
+/* ── SELECT PRODUCT ────────────────────────────────────── */
+function selectProduct(code) {
+  var prod = PRODUCTS[code];
+  if (!prod) return;
+
+  /* Update top selector cards */
+  selectorCards.forEach(function(c){
+    var isMe = c.dataset.product === code;
+    c.classList.toggle("selected", isMe);
+    c.setAttribute("aria-checked", isMe ? "true" : "false");
+  });
+
+  /* Update mini form selectors */
+  formProdOpts.forEach(function(opt){
+    var radio = opt.querySelector("input[type='radio']");
+    if (!radio) return;
+    var isMe = radio.dataset.product === code;
+    opt.classList.toggle("active", isMe);
+    radio.checked = isMe;
+  });
+
+  /* Sync hidden input */
+  hiddenProduct.value = prod.name;
+
+  /* Build image preview */
+  showPreview(prod);
+}
+
+function showPreview(prod) {
+  /* Switch panel style */
+  imgPanel.classList.remove("empty");
+
+  /* Populate fields */
+  previewCat.textContent   = prod.cat;
+  previewName.textContent  = prod.name;
+  previewBadge.textContent = prod.badge;
+  previewDesc.textContent  = prod.desc;
+
+  /* Build 2 images */
+  var html = "";
+  prod.imgs.forEach(function(img){
+    html +=
+      '<div class="preview-img-wrap" data-src="' + img.src + '" data-label="' + img.label + '">' +
+        '<img src="' + img.src + '" alt="' + img.label + ' — 3PieceSuit Pakistan" width="360" height="480" loading="lazy">' +
+        '<div class="preview-img-label">' + img.label + '</div>' +
+        '<div class="preview-zoom-icon" aria-hidden="true">🔍</div>' +
+      '</div>';
+  });
+  previewImgs.innerHTML = html;
+
+  /* Attach lightbox to each image wrap */
+  previewImgs.querySelectorAll(".preview-img-wrap").forEach(function(wrap){
+    wrap.addEventListener("click", function(){
+      openLightbox(wrap.dataset.src, wrap.dataset.label);
+    });
+    wrap.addEventListener("keydown", function(e){
+      if(e.key==="Enter"||e.key===" "){ e.preventDefault(); wrap.click(); }
+    });
+    wrap.setAttribute("tabindex","0");
+  });
+
+  /* Build feature tags */
+  var tagsHtml = "";
+  prod.features.forEach(function(f){
+    tagsHtml += '<span class="pf-tag">' + f + '</span>';
+  });
+  previewFeatures.innerHTML = tagsHtml;
+
+  /* Show content */
+  previewHint.style.display    = "none";
+  previewContent.style.display = "block";
+}
+
+/* ── TOP CARD CLICK / KEYBOARD ─────────────────────────── */
+selectorCards.forEach(function(card){
+  card.addEventListener("click", function(){
+    selectProduct(card.dataset.product);
+    /* Scroll to preview */
+    var panel = document.getElementById("imgPreviewPanel");
+    if(panel) panel.scrollIntoView({ behavior:"smooth", block:"nearest" });
+  });
+  card.addEventListener("keydown", function(e){
+    if(e.key==="Enter"||e.key===" "){ e.preventDefault(); card.click(); }
+  });
+});
+
+/* ── FORM RADIO CLICK ──────────────────────────────────── */
+formProdOpts.forEach(function(opt){
+  var radio = opt.querySelector("input[type='radio']");
+  opt.addEventListener("click", function(){
+    if(radio) selectProduct(radio.dataset.product);
+  });
+  if(radio){
+    radio.addEventListener("change", function(){
+      selectProduct(radio.dataset.product);
+    });
+  }
+});
+
+/* ── URL PARAM AUTO-SELECT ─────────────────────────────── */
+var urlP = new URLSearchParams(window.location.search).get("product");
+if(urlP && PRODUCTS[urlP]){
+  selectProduct(urlP);
+} else {
+  /* Default: auto-select P1 after short delay */
+  setTimeout(function(){ selectProduct("P1"); }, 400);
+}
+
+/* ── LIGHTBOX ──────────────────────────────────────────── */
+var lbOverlay = null;
+function openLightbox(src, caption){
+  if(lbOverlay) document.body.removeChild(lbOverlay);
+  lbOverlay = document.createElement("div");
+  lbOverlay.className = "lb-overlay";
+  lbOverlay.setAttribute("role","dialog");
+  lbOverlay.setAttribute("aria-modal","true");
+  lbOverlay.setAttribute("aria-label", caption || "Product image");
+  lbOverlay.innerHTML =
+    '<button class="lb-close" aria-label="Close">×</button>' +
+    '<img src="' + src + '" alt="' + (caption||"") + '">' +
+    '<p class="lb-caption">' + (caption||"") + ' — 3PieceSuit Pakistan</p>';
+  lbOverlay.querySelector(".lb-close").addEventListener("click", closeLb);
+  lbOverlay.addEventListener("click", function(e){ if(e.target===lbOverlay) closeLb(); });
+  document.body.appendChild(lbOverlay);
+  document.addEventListener("keydown", escLb);
+  document.body.style.overflow = "hidden";
+}
+function closeLb(){
+  if(lbOverlay&&lbOverlay.parentNode){ document.body.removeChild(lbOverlay); lbOverlay=null; }
+  document.removeEventListener("keydown", escLb);
+  document.body.style.overflow = "";
+}
+function escLb(e){ if(e.key==="Escape") closeLb(); }
+
+})();
+</script>
+
+<script src="script.js" defer></script>
+<script src="extra.js" defer></script>
+</body>
+</html>
